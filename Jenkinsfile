@@ -1,14 +1,8 @@
 pipeline{
     agent any
     
-    stages{
-        
-        stage("checkout"){
-            steps{
-                git branch:'main', url:'https://github.com/AlanVP1/peturl'
-            }    
-        }
-        
+    stages{ 
+               
         stage ("build"){
             steps{
                 sh "./mvnw package"
